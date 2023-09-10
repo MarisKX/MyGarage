@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      args:
+       - DEV=true
+    ports:
+      - "8050:8050"
+    volumes:
+      - ./template:/template
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8050"
