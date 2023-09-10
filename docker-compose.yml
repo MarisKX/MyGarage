@@ -9,6 +9,6 @@ services:
     ports:
       - "8050:8050"
     volumes:
-      - ./template:/template
+      - ./MyGarage:/MyGarage
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8050"
