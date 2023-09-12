@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-z)k0(+02rxs3@6*v^3--cqqp9ae1jb3uc=##z!&n3xhz0hclje
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'drf_spectacular',
     # Custom apps:
     'core',
+    'user',
 ]
 
 MIDDLEWARE = [

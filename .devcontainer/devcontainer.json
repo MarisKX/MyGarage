@@ -1,0 +1,9 @@
+{
+    "name": "MyGarage",
+    "dockerFile": "Dockerfile",
+    "forwardPorts": [8050],
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": ["ms-python.python", "esbenp.prettier-vscode"]
+}
