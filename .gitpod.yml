@@ -1,9 +1,7 @@
 image:
-  image.file: Dockerfile
+  file: Dockerfile
 tasks:
-  - init: echo "Setting up the workspace."
+  - init: export DEV=true; echo "Setting up the workspace."
     command: echo "Workspace ready to code!"
 ports:
   - port: 8050
-environment:
-  DEV: "true"
