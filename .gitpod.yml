@@ -1,7 +1,2 @@
 image:
   file: Dockerfile
-tasks:
-  - init: export DEV=true; echo "Setting up the workspace."
-    command: echo "Workspace ready to code!"
-ports:
-  - port: 8050
