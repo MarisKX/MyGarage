@@ -21,15 +21,8 @@ RUN python -m venv /py && \
         then echo "--DEV BUILD--" && /py/bin/pip install -r /tmp/requirements.dev.txt ; \
     fi && \
     rm -rf /tmp && \
-    apk del .tmp-build-deps && \
-    addgroup -g 1000 gitpod && \
-    adduser \
-    --disabled-password \
-    --no-create-home \
-    --uid 1000 \
-    --ingroup gitpod \
-    django-user
+    apk del .tmp-build-deps
 
 ENV PATH="/py/bin:$PATH"
 
-USER django-user
+USER gitpod
