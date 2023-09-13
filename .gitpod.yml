@@ -1,17 +1,9 @@
 image:
   file: Dockerfile
-
-# List of tasks to run when starting a new workspace
 tasks:
-  - init: echo 'Running init script...' && setup-command
-  - command: echo 'Running command...' && start-server
-
-# Ports to expose on workspace startup
+  - init: echo "Setting up the workspace."
+    command: echo "Workspace ready to code!"
 ports:
   - port: 8050
-    onOpen: open-preview
-
-# VSCode extensions to install
-vscode:
-  extensions:
-    - esbenp.prettier-vscode
+environment:
+  DEV: "true"

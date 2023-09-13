@@ -22,10 +22,13 @@ RUN python -m venv /py && \
     fi && \
     rm -rf /tmp && \
     apk del .tmp-build-deps && \
+    addgroup -g 1000 gitpod && \
     adduser \
-        --disabled-password \
-        --no-create-home \
-        django-user
+    --disabled-password \
+    --no-create-home \
+    --uid 1000 \
+    --ingroup gitpod \
+    django-user
 
 ENV PATH="/py/bin:$PATH"
 
