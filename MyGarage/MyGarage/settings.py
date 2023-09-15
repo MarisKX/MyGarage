@@ -38,9 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     # Add Ons
     'rest_framework',
+    'rest_framework.authtoken',
     'drf_spectacular',
+
     # Custom apps:
     'core',
     'user',
